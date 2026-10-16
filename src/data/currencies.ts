@@ -1,0 +1,108 @@
+import { CurrencyInfo, SendCurrencyCode, ReceiveCurrencyCode } from '../types';
+
+export const SEND_CURRENCIES: Record<SendCurrencyCode, CurrencyInfo> = {
+  SAR: { code: 'SAR', name: 'Saudi Riyal', symbol: '﷼', flag: '🇸🇦', country: 'Saudi Arabia' },
+  AED: { code: 'AED', name: 'UAE Dirham', symbol: 'د.إ', flag: '🇦🇪', country: 'United Arab Emirates' },
+  KWD: { code: 'KWD', name: 'Kuwaiti Dinar', symbol: 'د.ك', flag: '🇰🇼', country: 'Kuwait' },
+  QAR: { code: 'QAR', name: 'Qatari Riyal', symbol: 'ر.ق', flag: '🇶🇦', country: 'Qatar' },
+  OMR: { code: 'OMR', name: 'Omani Rial', symbol: 'ر.ع.', flag: '🇴🇲', country: 'Oman' },
+  BHD: { code: 'BHD', name: 'Bahraini Dinar', symbol: 'د.ب', flag: '🇧🇭', country: 'Bahrain' },
+  GBP: { code: 'GBP', name: 'British Pound', symbol: '£', flag: '🇬🇧', country: 'United Kingdom' },
+  EUR: { code: 'EUR', name: 'Euro', symbol: '€', flag: '🇪🇺', country: 'Europe' },
+  USD: { code: 'USD', name: 'US Dollar', symbol: '$', flag: '🇺🇸', country: 'United States' },
+};
+
+export const RECEIVE_CURRENCIES: Record<ReceiveCurrencyCode, CurrencyInfo> = {
+  PKR: { code: 'PKR', name: 'Pakistani Rupee', symbol: '₨', flag: '🇵🇰', country: 'Pakistan' },
+  INR: { code: 'INR', name: 'Indian Rupee', symbol: '₹', flag: '🇮🇳', country: 'India' },
+  BDT: { code: 'BDT', name: 'Bangladeshi Taka', symbol: '৳', flag: '🇧🇩', country: 'Bangladesh' },
+  EGP: { code: 'EGP', name: 'Egyptian Pound', symbol: 'ج.م', flag: '🇪🇬', country: 'Egypt' },
+  PHP: { code: 'PHP', name: 'Philippine Peso', symbol: '₱', flag: '🇵🇭', country: 'Philippines' },
+  LKR: { code: 'LKR', name: 'Sri Lankan Rupee', symbol: 'Rs', flag: '🇱🇰', country: 'Sri Lanka' },
+  NPR: { code: 'NPR', name: 'Nepalese Rupee', symbol: 'रू', flag: '🇳🇵', country: 'Nepal' },
+};
+
+// Base mid-market interbank exchange rates (SendCurrency -> ReceiveCurrency)
+export const BASE_INTERBANK_RATES: Record<SendCurrencyCode, Record<ReceiveCurrencyCode, number>> = {
+  SAR: {
+    PKR: 74.45,
+    INR: 23.32,
+    BDT: 32.48,
+    EGP: 13.15,
+    PHP: 15.65,
+    LKR: 80.20,
+    NPR: 37.30,
+  },
+  AED: {
+    PKR: 76.05,
+    INR: 23.82,
+    BDT: 33.15,
+    EGP: 13.42,
+    PHP: 15.98,
+    LKR: 81.90,
+    NPR: 38.10,
+  },
+  KWD: {
+    PKR: 908.50,
+    INR: 284.70,
+    BDT: 396.40,
+    EGP: 160.50,
+    PHP: 191.20,
+    LKR: 979.00,
+    NPR: 455.50,
+  },
+  QAR: {
+    PKR: 76.60,
+    INR: 24.00,
+    BDT: 33.40,
+    EGP: 13.52,
+    PHP: 16.10,
+    LKR: 82.50,
+    NPR: 38.40,
+  },
+  OMR: {
+    PKR: 725.20,
+    INR: 227.30,
+    BDT: 316.30,
+    EGP: 128.10,
+    PHP: 152.60,
+    LKR: 781.50,
+    NPR: 363.50,
+  },
+  BHD: {
+    PKR: 740.60,
+    INR: 232.10,
+    BDT: 323.00,
+    EGP: 130.80,
+    PHP: 155.80,
+    LKR: 798.00,
+    NPR: 371.30,
+  },
+  GBP: {
+    PKR: 362.40,
+    INR: 113.60,
+    BDT: 158.10,
+    EGP: 64.05,
+    PHP: 76.25,
+    LKR: 390.80,
+    NPR: 181.70,
+  },
+  EUR: {
+    PKR: 301.80,
+    INR: 94.60,
+    BDT: 131.60,
+    EGP: 53.30,
+    PHP: 63.50,
+    LKR: 325.50,
+    NPR: 151.30,
+  },
+  USD: {
+    PKR: 279.20,
+    INR: 87.50,
+    BDT: 121.80,
+    EGP: 49.30,
+    PHP: 58.70,
+    LKR: 301.10,
+    NPR: 139.90,
+  },
+};

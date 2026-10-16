@@ -1,0 +1,6 @@
+{
+  "name": "RateCompare - Remittance Exchange Rates",
+  "description": "Live currency exchange rate comparison for overseas workers sending money from Middle East and Europe to Pakistan, India, Bangladesh, and Egypt.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
