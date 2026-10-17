@@ -184,7 +184,7 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen transition-colors overflow-x-hidden w-full max-w-full ${
+      className={`min-h-screen transition-colors overflow-x-clip w-full max-w-full ${
         theme === 'dark'
           ? 'bg-[#011a14] text-stone-100 selection:bg-amber-400 selection:text-stone-950'
           : 'bg-[#f4fbf7] text-stone-900 selection:bg-emerald-600 selection:text-white'
@@ -221,7 +221,7 @@ export default function App() {
       />
 
       {/* Main Content Area (Clean 5 Tabs) */}
-      <main className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto px-4 pt-4 min-h-[calc(100vh-120px)]">
+      <main className="max-w-md sm:max-w-xl md:max-w-2xl mx-auto px-4 pt-4 pb-32 min-h-[calc(100vh-120px)]">
         {currentTab === 'home' && (
           <HomeTab
             sendCurrency={sendCurrency}
